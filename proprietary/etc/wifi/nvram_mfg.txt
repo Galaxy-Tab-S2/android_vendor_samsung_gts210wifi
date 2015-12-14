@@ -1,4 +1,4 @@
-# SS_TabS2_S_LTE Released on 20150326_Add parameter and delete unused parameter
+# SS_TabS2_L_WiFi Released on 20150616
 ###################################################################################################
 # General parameters
 sromrev=11
@@ -28,10 +28,9 @@ agbg0=0
 agbg1=0
 aga0=0
 aga1=0
-ag0=0
 AvVmid_c0=2,140,2,145,2,145,2,145,2,145
 AvVmid_c1=2,140,2,145,2,145,2,145,2,145
-AvVmid_c2=0,0,0,0,0,0,0,0,0,0
+#AvVmid_c2=0,0,0,0,0,0,0,0,0,0
 tssisleep_en=0x1f
 
 ltecxmux=0x77540
@@ -95,31 +94,33 @@ tssipos2g=1
 extpagain2g=2
 rssicorrnorm_c0=1,1
 rssicorrnorm_c1=1,1
-cckdigfilttype=4
+cckdigfilttype=2
 
 # Max Power is 18.5 dBm-1.5(backoff) = 17dBm
-maxp2ga0=74
-maxp2ga1=74
+maxp2ga0=82
+maxp2ga1=82
 
 # Pa Params for 2 range
 #high range
-pa2ga0=0xff9d,0x17dd,0xfd74
-pa2ga1=0xffa2,0x180a,0xfd77
+#pa2ga0=0xff94,0x1696,0xfd84
+#pa2ga1=0xff91,0x17a8,0xfd63
+pa2ga0=0xff94,0x1896,0xfd69
+pa2ga1=0xff91,0x19a8,0xfd48
 
 #low range
-pa2ga2=0xff75,0xf07,0xfdde
-pa2ga3=0xff67,0xed8,0xfde8
+pa2ga2=0xff86,0x0ed7,0xfdda
+pa2ga3=0xff6f,0x0f53,0xfdd7
 
-pdoffsetcckma0=0x3
-pdoffsetcckma1=0x3
+pdoffsetcckma0=0x4
+pdoffsetcckma1=0x4
 
 # Power offsets
 cckbw202gpo=0x0000
 cckbw20ul2gpo=0x0000
-mcsbw202gpo=0xa9666644
-mcsbw402gpo=0xa9666644
-dot11agofdmhrbw202gpo=0x6642
-ofdmlrbw202gpo=0x0022
+mcsbw202gpo=0xaa844440
+mcsbw402gpo=0xccaaaa86
+dot11agofdmhrbw202gpo=0x8864
+ofdmlrbw202gpo=0x4422
 sb20in40hrpo=0x0
 sb20in40lrpo=0x0
 ###################################################################################################
@@ -128,11 +129,11 @@ sb20in40lrpo=0x0
 pdgain5g=4
 
 # ch12 power limit value
-fccpwrch12=40 
+fccpwrch12=1
 # ch13 power limit value
 fccpwrch13=1 
 # Enable/disable for wifi only model
-fccpwroverride=0 
+fccpwroverride=1 
 
 
 #5G elna gain from datasheet is 12dB
@@ -165,16 +166,18 @@ rssicorrnorm5g_c0=0,0,2,0,1,1,-1,0,1,-1,0,1
 rssicorrnorm5g_c1=0,0,2,0,0,1,-1,-1,1,-1,-1,1
 
 # Max Power is 18.5 dBm for all 5G bands
-maxp5ga0=74,74,74,74
-maxp5ga1=74,74,74,74
+maxp5ga0=82,82,82,82
+maxp5ga1=82,82,82,82
 
 #high power range
-pa5ga0=0xff61,0x17d8,0xfd35,0xff62,0x17fe,0xfd31,0xff5f,0x17de,0xfd32,0xff5f,0x17b7,0xfd34
-pa5ga1=0xff5d,0x17de,0xfd36,0xff57,0x17f3,0xfd29,0xff59,0x17f7,0xfd2f,0xff5a,0x17ce,0xfd36
+#pa5ga0=0xff57,0x1818,0xfd27,0xff58,0x17ff,0xfd2c,0xff54,0x171f,0xfd3f,0xff57,0x1684,0xfd50
+#pa5ga1=0xff58,0x1841,0xfd25,0xff5b,0x1856,0xfd27,0xff5a,0x17e9,0xfd34,0xff52,0x1742,0xfd3c
+pa5ga0=0xff57,0x1a18,0xfcfd,0xff58,0x19ff,0xfd02,0xff54,0x191f,0xfd14,0xff57,0x1884,0xfd26
+pa5ga1=0xff58,0x1a41,0xfcfb,0xff5b,0x1a56,0xfcfe,0xff5a,0x19e9,0xfd0a,0xff52,0x1942,0xfd10
 
 #low power range
-pa5ga2=0xffa0,0xe34,0xfddd,0xffab,0xee3,0xfdd1,0xff7b,0xe9d,0xfde9,0xff83,0xec8,0xfde2
-pa5ga3=0xff5d,0xe39,0xfdfa,0xff64,0xe90,0xfdf2,0xff59,0xe79,0xfdf8,0xff61,0xebe,0xfdef
+pa5ga2=0xffa1,0x0f28,0xfdd2,0xff99,0x0ef7,0xfddb,0xff92,0x0ef9,0xfddf,0xffa0,0x0ec3,0xfddc
+pa5ga3=0xff5e,0x0f50,0xfde2,0xff6a,0x0fe3,0xfdd5,0xff57,0x0f1c,0xfdec,0xff80,0x1020,0xfdd0
 
 pdoffset40ma0=0x0000
 pdoffset80ma0=0x0000
@@ -183,9 +186,9 @@ pdoffset80ma1=0x0000
 
 # Low band power offsets
 mcslr5glpo=0x0000
-mcsbw205glpo=0x88866662
-mcsbw405glpo=0xAAA88884
-mcsbw805glpo=0xCCCAAAA6
+mcsbw205glpo=0xaaa66660
+mcsbw405glpo=0xccc66662
+mcsbw805glpo=0xdddbbbbb
 sb40and80lr5glpo=0x0
 sb40and80hr5glpo=0x0
 sb20in80and160lr5glpo=0x0
@@ -193,27 +196,26 @@ sb20in80and160hr5glpo=0x0
 
 # Mid band power offsets
 mcslr5gmpo=0x0000
-mcsbw205gmpo=0x88866662
-mcsbw405gmpo=0xAAA88884
-mcsbw805gmpo=0xCCCAAAA6
+mcsbw205gmpo=0xaaa66660
+mcsbw405gmpo=0xccc66662
+mcsbw805gmpo=0xdddbbbbb
 sb40and80lr5gmpo=0x0
 sb40and80hr5gmpo=0x0
 sb20in80and160lr5gmpo=0x0
 sb20in80and160hr5gmpo=0x0
 
 # High band power offsets
-mcslr5ghpo=0x0000
-mcsbw205ghpo=0x88866662
-mcsbw405ghpo=0xAAA88884
-mcsbw805ghpo=0xCCCAAAA6
+mcsbw205ghpo=0xaaa66660
+mcsbw405ghpo=0xccc66662
+mcsbw805ghpo=0xdddbbbbb
 sb40and80lr5ghpo=0x0
 sb40and80hr5ghpo=0x0
 sb20in80and160lr5ghpo=0x0
 sb20in80and160hr5ghpo=0x0
 
 ## 2G TX power compensation
-powoffs2gtna0=0,0,0,-3,-3,-1,0,0,-2,-2,-1,0,2,0
-powoffs2gtna1=-3,-3,-4,-5,-5,-4,-4,-2,-3,-4,-5,-4,-7,0
+#powoffs2gtna0=0,0,0,-3,-3,-1,0,0,-2,-2,-1,0,2,0
+#powoffs2gtna1=0,0,0,-2,-2,0,0,0,-2,-4,-4,-1,0,0
 
 cck_onecore_tx=1
 
@@ -223,8 +225,8 @@ papdwar=4
 ## Enabling OOB signal - needed for final board
 host_wake_opt=0
 ## SAR control
-dynamicsarctrl_2g=0xb0b8
-dynamicsarctrl_5g=0xa0a0
+dynamicsarctrl_2g=0xc0b8
+dynamicsarctrl_5g=0xa8a0
 
 btc_params82=0x0
 btc_params51=0x409f
@@ -247,8 +249,5 @@ btcdyn_msw_row0=1,12,-70,-5,-100
 # --- desense switching data rows (max is 4) ---
 btcdyn_dsns_row0=5,4,0,-65,-65
 
+ag0=0
 
-
-
-
-                                                                                                                                                                                                                                                                                                                                                                                             
