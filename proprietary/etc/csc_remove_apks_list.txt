@@ -1,0 +1,7 @@
+/system/priv-app/HancomOffice_Shared/HancomOffice_Shared.apk
+/system/priv-app/HancomUpdater/HancomUpdater.apk
+/system/priv-app/hanviewerlauncher/hanviewerlauncher.apk
+/system/priv-app/hanwidget/hanwidget.apk
+/system/priv-app/hcellviewer/hcellviewer.apk
+/system/priv-app/hshowviewer/hshowviewer.apk
+/system/priv-app/hwordviewer/hwordviewer.apk
