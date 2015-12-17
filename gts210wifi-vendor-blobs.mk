@@ -29,9 +29,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
     vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt_4356_a2:system/etc/wifi/nvram_net.txt_4356_a2 \
     vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt_4358_a1:system/etc/wifi/nvram_net.txt_4358_a1 \
+    vendor/samsung/gts210wifi/proprietary/lib/libwifi-service.so:system/lib/libwifi-service.so \
+    vendor/samsung/gts210wifi/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so \
     vendor/samsung/gts210wifi/proprietary/vendor/firmware/hevc_fw.bin:system/vendor/firmware/hevc_fw.bin \
     vendor/samsung/gts210wifi/proprietary/vendor/firmware/mfc_fw.bin:system/vendor/firmware/mfc_fw.bin \
     vendor/samsung/gts210wifi/proprietary/vendor/firmware/fimc_is_fw2_4h5.bin:system/vendor/firmware/fimc_is_fw2_4h5.bin \
+    vendor/samsung/gts210wifi/proprietary/lib/libmtp_samsung.so:system/lib/libmtp_samsung.so \
     vendor/samsung/gts210wifi/proprietary/vendor/firmware/seiren_fw_dram.bin:system/vendor/firmware/seiren_fw_dram.bin \
     vendor/samsung/gts210wifi/proprietary/vendor/firmware/seiren_fw_sram.bin:system/vendor/firmware/seiren_fw_sram.bin \
     vendor/samsung/gts210wifi/proprietary/lib/hw/camera.universal5433.so:system/lib/hw/camera.universal5433.so \
@@ -45,8 +48,15 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/libmalicore.bc:system/vendor/lib/libmalicore.bc \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/egl/libGLES_mali.so:system/vendor/lib/egl/libGLES_mali.so \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/libRSDriverArm.so:system/vendor/lib/libRSDriverArm.so \
+    vendor/samsung/gts210wifi/proprietary/lib/hw/hwcomposer.exynos5.so:system/lib/hw/hwcomposer.exynos5.so \
+    vendor/samsung/gts210wifi/proprietary/lib/libhwcutilsmodule.so:system/lib/libhwcutilsmodule.so \
+    vendor/samsung/gts210wifi/proprietary/lib/libhwcutils.so:system/lib/libhwcutils.so \
     vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.AVC.Encoder.so:system/lib/omx/libOMX.Exynos.AVC.Encoder.so \
     vendor/samsung/gts210wifi/proprietary/lib/hw/sensors.exynos5.so:system/lib/hw/sensors.exynos5.so \
+    vendor/samsung/gts210wifi/proprietary/lib/hw/sensors.goldfish.so:system/lib/hw/sensors.goldfish.so \
+    vendor/samsung/gts210wifi/proprietary/lib/libsensorlistener.so:system/lib/libsensorlistener.so \
+    vendor/samsung/gts210wifi/proprietary/lib/libsensorservice.so:system/lib/libsensorservice.so \
+    vendor/samsung/gts210wifi/proprietary/lib/libyasalgo.so:system/lib/libyasalgo.so \
     vendor/samsung/gts210wifi/proprietary/lib/liboemcrypto.so:system/lib/liboemcrypto.so \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/mediadrm/libdrmclearkeyplugin.so:system/vendor/lib/mediadrm/libdrmclearkeyplugin.so \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
@@ -56,29 +66,29 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts210wifi/proprietary/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     vendor/samsung/gts210wifi/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
     vendor/samsung/gts210wifi/proprietary/app/FFFFFFFF000000000000000000000001.drbin:system/app/FFFFFFFF000000000000000000000001.drbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/07010000000000000000000000000000.tlbin:system//app/mcRegistry/07010000000000000000000000000000.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffffd0000000000000000000000e.tlbin:system//app/mcRegistry/ffffffffd0000000000000000000000e.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/07060000000000000000000000000000.tlbin:system//app/mcRegistry/07060000000000000000000000000000.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff00000000000000000000000e.tlbin:system//app/mcRegistry/ffffffff00000000000000000000000e.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000011.tlbin:system//app/mcRegistry/ffffffff000000000000000000000011.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff00000000000000000000000d.tlbin:system//app/mcRegistry/ffffffff00000000000000000000000d.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff00000000000000000000000b.tlbin:system//app/mcRegistry/ffffffff00000000000000000000000b.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000021.tlbin:system//app/mcRegistry/ffffffff000000000000000000000021.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000012.tlbin:system//app/mcRegistry/ffffffff000000000000000000000012.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000013.tlbin:system//app/mcRegistry/ffffffff000000000000000000000013.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff00000000000000000000000a.tlbin:system//app/mcRegistry/ffffffff00000000000000000000000a.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff00000000000000000000001f.tlbin:system//app/mcRegistry/ffffffff00000000000000000000001f.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffffd00000000000000000000004.tlbin:system//app/mcRegistry/ffffffffd00000000000000000000004.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000017.tlbin:system//app/mcRegistry/ffffffff000000000000000000000017.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000018.tlbin:system//app/mcRegistry/ffffffff000000000000000000000018.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/02010000080300030000000000000000.tlbin:system//app/mcRegistry/02010000080300030000000000000000.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000005.tlbin:system//app/mcRegistry/ffffffff000000000000000000000005.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000019.tlbin:system//app/mcRegistry/ffffffff000000000000000000000019.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/00060308060501020000000000000000.tlbin:system//app/mcRegistry/00060308060501020000000000000000.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff00000000000000000000000c.tlbin:system//app/mcRegistry/ffffffff00000000000000000000000c.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/fffffffff0000000000000000000001e.tlbin:system//app/mcRegistry/fffffffff0000000000000000000001e.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffffd00000000000000000000016.tlbin:system//app/mcRegistry/ffffffffd00000000000000000000016.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffffd0000000000000000000000a.tlbin:system//app/mcRegistry/ffffffffd0000000000000000000000a.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff00000000000000000000000f.tlbin:system//app/mcRegistry/ffffffff00000000000000000000000f.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000004.tlbin:system//app/mcRegistry/ffffffff000000000000000000000004.tlbin \
-    vendor/samsung/gts210wifi/proprietary//app/mcRegistry/ffffffff000000000000000000000016.tlbin:system//app/mcRegistry/ffffffff000000000000000000000016.tlbin
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/07010000000000000000000000000000.tlbin:system/app/mcRegistry/07010000000000000000000000000000.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin:system/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/07060000000000000000000000000000.tlbin:system/app/mcRegistry/07060000000000000000000000000000.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff00000000000000000000000e.tlbin:system/app/mcRegistry/ffffffff00000000000000000000000e.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000011.tlbin:system/app/mcRegistry/ffffffff000000000000000000000011.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff00000000000000000000000d.tlbin:system/app/mcRegistry/ffffffff00000000000000000000000d.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff00000000000000000000000b.tlbin:system/app/mcRegistry/ffffffff00000000000000000000000b.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000021.tlbin:system/app/mcRegistry/ffffffff000000000000000000000021.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000012.tlbin:system/app/mcRegistry/ffffffff000000000000000000000012.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000013.tlbin:system/app/mcRegistry/ffffffff000000000000000000000013.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff00000000000000000000000a.tlbin:system/app/mcRegistry/ffffffff00000000000000000000000a.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff00000000000000000000001f.tlbin:system/app/mcRegistry/ffffffff00000000000000000000001f.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffffd00000000000000000000004.tlbin:system/app/mcRegistry/ffffffffd00000000000000000000004.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000017.tlbin:system/app/mcRegistry/ffffffff000000000000000000000017.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000018.tlbin:system/app/mcRegistry/ffffffff000000000000000000000018.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/02010000080300030000000000000000.tlbin:system/app/mcRegistry/02010000080300030000000000000000.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000005.tlbin:system/app/mcRegistry/ffffffff000000000000000000000005.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000019.tlbin:system/app/mcRegistry/ffffffff000000000000000000000019.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/00060308060501020000000000000000.tlbin:system/app/mcRegistry/00060308060501020000000000000000.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff00000000000000000000000c.tlbin:system/app/mcRegistry/ffffffff00000000000000000000000c.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/fffffffff0000000000000000000001e.tlbin:system/app/mcRegistry/fffffffff0000000000000000000001e.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffffd00000000000000000000016.tlbin:system/app/mcRegistry/ffffffffd00000000000000000000016.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin:system/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff00000000000000000000000f.tlbin:system/app/mcRegistry/ffffffff00000000000000000000000f.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000004.tlbin:system/app/mcRegistry/ffffffff000000000000000000000004.tlbin \
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffff000000000000000000000016.tlbin:system/app/mcRegistry/ffffffff000000000000000000000016.tlbin
