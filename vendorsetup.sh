@@ -1,2 +1,0 @@
-add_lunch_combo cm_gts210wifi-eng
-add_lunch_combo cm_gts210wifi-userdebug
