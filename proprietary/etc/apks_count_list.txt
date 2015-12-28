@@ -134,8 +134,8 @@
 /system/app/SnsImageCache/SnsImageCache.apk
 /system/app/ringtoneBR/ringtoneBR.apk
 /system/app/KnoxAttestationAgent/KnoxAttestationAgent.apk
-/system/app/TcpdumpService/TcpdumpService.apk
 /system/app/UserDictionaryProvider/UserDictionaryProvider.apk
+/system/app/TcpdumpService/TcpdumpService.apk
 /system/app/SplitSoundService/SplitSoundService.apk
 /system/app/EdmSimPinService/EdmSimPinService.apk
 /system/app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk
@@ -153,7 +153,7 @@
 /system/priv-app/SystemUI/SystemUI.apk
 /system/priv-app/GalaxyApps_Tablet/GalaxyApps_Tablet.apk
 /system/priv-app/Phonesky/Phonesky.apk
-/system/priv-app/SecContacts_L_TabletWiFi_half/SecContacts_L_TabletWiFi_half.apk
+/system/priv-app/SecContacts_L_TabletWiFi/SecContacts_L_TabletWiFi.apk
 /system/priv-app/SecEmailUI/SecEmailUI.apk
 /system/priv-app/SecGallery2015/SecGallery2015.apk
 /system/priv-app/GoogleLoginService_tablet/GoogleLoginService_tablet.apk
@@ -162,7 +162,7 @@
 /system/priv-app/hwordviewer/hwordviewer.apk
 /system/priv-app/DeviceKeystring/DeviceKeystring.apk
 /system/priv-app/Samsungservice2_xlarge-xhdpi_zero/Samsungservice2_xlarge-xhdpi_zero.apk
-/system/priv-app/SmartManager_XGA_half/SmartManager_XGA_half.apk
+/system/priv-app/SmartManager_XGA/SmartManager_XGA.apk
 /system/priv-app/HwModuleTest/HwModuleTest.apk
 /system/priv-app/SetupWizard_tablet/SetupWizard_tablet.apk
 /system/priv-app/sCloudBackupAppZero/sCloudBackupAppZero.apk

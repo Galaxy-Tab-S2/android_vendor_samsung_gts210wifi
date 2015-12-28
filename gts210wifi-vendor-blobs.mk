@@ -45,7 +45,18 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/libmalicore.bc:system/vendor/lib/libmalicore.bc \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/egl/libGLES_mali.so:system/vendor/lib/egl/libGLES_mali.so \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/libRSDriverArm.so:system/vendor/lib/libRSDriverArm.so \
+    vendor/samsung/gts210wifi/proprietary/lib/libExynosOMX_Core.so:system/lib/libExynosOMX_Core.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.MPEG4.Decoder.so:system/lib/omx/libOMX.Exynos.MPEG4.Decoder.so \
     vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.AVC.Encoder.so:system/lib/omx/libOMX.Exynos.AVC.Encoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.VP8.Encoder.so:system/lib/omx/libOMX.Exynos.VP8.Encoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.WMV.Decoder.so:system/lib/omx/libOMX.Exynos.WMV.Decoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.AVC.Decoder.so:system/lib/omx/libOMX.Exynos.AVC.Decoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.MP3.Decoder.so:system/lib/omx/libOMX.Exynos.MP3.Decoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.HEVC.Decoder.so:system/lib/omx/libOMX.Exynos.HEVC.Decoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.AAC.Decoder.so:system/lib/omx/libOMX.Exynos.AAC.Decoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.VP8.Decoder.so:system/lib/omx/libOMX.Exynos.VP8.Decoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.MPEG4.Encoder.so:system/lib/omx/libOMX.Exynos.MPEG4.Encoder.so \
+    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.FLAC.Decoder.so:system/lib/omx/libOMX.Exynos.FLAC.Decoder.so \
     vendor/samsung/gts210wifi/proprietary/lib/hw/sensors.exynos5.so:system/lib/hw/sensors.exynos5.so \
     vendor/samsung/gts210wifi/proprietary/lib/libsensorservice.so:system/lib/libsensorservice.so \
     vendor/samsung/gts210wifi/proprietary/lib/libyasalgo.so:system/lib/libyasalgo.so \

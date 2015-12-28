@@ -13,13 +13,10 @@
 	<ctl name="LINEOUTR NG LINEOUTR Switch" value="0" />
 	<ctl name="SPKOUTL NG SPKOUTL Switch" value="0" />
 	<ctl name="SPKOUTR NG SPKOUTR Switch" value="0" />
-	<ctl name="EPOUT NG EPOUT Switch" value="0" />
 	<ctl name="Noise Gate Threshold Volume" value="3" />
 
 	<!-- Analog output AMP -->
 	<!-- AP Side is mixed to Input 1 of each out mixer -->
-
-	<!-- RCV(mono) -->
 
 	<!-- SPK(stereo) -->
 	<ctl name="SPKOUTL Input 1" value="AIF1RX1" />
@@ -74,9 +71,6 @@
 	<!-- need to move channeltype -->
 
 	<!--  Gain for mics -->
-	<ctl name="IN1R Volume" value="30" />
-	<ctl name="IN2 Volume" value="30" />
-
 	<!--  Mics to AIF2TX -->
 	<!-- ctl name="ASRC1L Input" value="LHPF1" -->
 	<!-- ctl name="ASRC1R Input" value="LHPF2" -->
@@ -122,24 +116,13 @@
 	<ctl name="ISRC2 FSL" value="ASYNCCLK rate" />
 	<ctl name="ISRC2 FSH" value="ASYNCCLK rate 2" />
 
-	<ctl name="EQ1 B1 Volume" value="12" />
-	<ctl name="EQ1 B2 Volume" value="12" />
-	<ctl name="EQ1 B3 Volume" value="12" />
-	<ctl name="EQ1 B4 Volume" value="12" />
-	<ctl name="EQ1 B5 Volume" value="12" />
-	<ctl name="EQ2 B1 Volume" value="12" />
-	<ctl name="EQ2 B2 Volume" value="12" />
-	<ctl name="EQ2 B3 Volume" value="12" />
-	<ctl name="EQ2 B4 Volume" value="12" />
-	<ctl name="EQ2 B5 Volume" value="12" />
-
 	<ctl name="HP1 Bias" value="192 0" />
 	<ctl name="DAC Comp" value="0 0 0 1" />
 	<ctl name="FRF Coefficients" value="14 104 231 142 13 28 252 210" />
 
 	<!--HW DRE default Off -->
-	<ctl name="HPOUT DRE Switch" value="0" />
-	<ctl name="HPOUT EDRE Switch" value="0" />
+	<ctl name="HPOUT DRE Switch" value="1" />
+	<ctl name="HPOUT EDRE Switch" value="1" />
 	<ctl name="SPKOUT EDRE Switch" value="0" />
 	<ctl name="RCV Switch" value="0" />
 	<ctl name="SPK Switch" value="0" />
@@ -147,7 +130,6 @@
 	<ctl name="VPS Switch" value="0" />
 	<ctl name="HDMI Switch" value="0" />
 	<ctl name="Main Mic Switch" value="0" />
-	<ctl name="Sub Mic Switch" value="0" />
 	<ctl name="Headset Mic Switch" value="0" />
 
 	<!-- Channel information -->
@@ -187,7 +169,7 @@
 		<!-- Output stage -->
 		<!-- media playback -->
 		<path name="media-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="media-speaker">
@@ -198,7 +180,6 @@
 		</path>
 
 		<path name="media-headset">
-			<ctl name="HPOUT EDRE Switch" value="1" />
 			<ctl name="HPOUTL Input 1" value="AIF1RX1" />
 			<ctl name="HPOUTR Input 1" value="AIF1RX2" />
 			<ctl name="HP Switch" value="1" />
@@ -256,11 +237,14 @@
 		</path>
 
 		<path name="communication-headset">
-			<path name="media-headset" />
+			<ctl name="HPOUT EDRE Switch" value="0" />
+			<ctl name="HPOUTL Input 1" value="AIF1RX1" />
+			<ctl name="HPOUTR Input 1" value="AIF1RX2" />
+			<ctl name="HP Switch" value="1" />
 		</path>
 
 		<path name="communication-headphone">
-			<path name="media-headset" />
+			<path name="communication-headset" />
 		</path>
 
 		<path name="communication-bt-sco-headset">
@@ -298,11 +282,11 @@
 		</path>
 
 		<path name="voip-headset">
-			<path name="media-headset" />
+			<path name="communication-headset" />
 		</path>
 
 		<path name="voip-headphone">
-			<path name="media-headset" />
+			<path name="voip-headset" />
 		</path>
 
 		<path name="voip-bt-sco-headset">
@@ -319,11 +303,11 @@
 		</path>
 
 		<path name="video_call-headset">
-			<path name="media-headset" />
+			<path name="communication-headset" />
 		</path>
 
 		<path name="video_call-headphone">
-			<path name="media-headset" />
+			<path name="video_call-headset" />
 		</path>
 
 		<path name="video_call-bt-sco-headset">
@@ -376,7 +360,7 @@
 		<!-- CP Call Output -->
 		<!-- NB -->
 		<path name="incall_nb-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="incall_nb-speaker">
@@ -399,7 +383,7 @@
 		<path name="incall_nb-headset">
 			<ctl name="AIF2 Mode" value="Slave" />
 			<ctl name="ASRC RATE 2" value="ASYNCCLK rate 2" />
-			<ctl name="HPOUT DRE Switch" value="0" />
+			<ctl name="HPOUT EDRE Switch" value="0" />
 			<ctl name="ISRC2INT1 Input" value="AIF2RX1" />
 			<ctl name="ISRC2INT2 Input" value="AIF2RX1" />
 			<ctl name="ASRC2L Input" value="ISRC2INT1" />
@@ -474,11 +458,24 @@
 
 		<!-- WB -->
 		<path name="incall_wb-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="incall_wb-speaker">
-			<!-- TODO: Not Supported -->
+			<ctl name="AIF2 Mode" value="Slave" />
+			<ctl name="ASRC RATE 2" value="ASYNCCLK rate 2" />
+			<ctl name="ISRC2INT1 Input" value="AIF2RX1" />
+			<ctl name="ISRC2INT2 Input" value="AIF2RX1" />
+			<ctl name="ASRC2L Input" value="ISRC2INT1" />
+			<ctl name="ASRC2R Input" value="ISRC2INT2" />
+			<ctl name="SPKOUTL Input 1" value="AIF1RX1" />
+			<ctl name="SPKOUTR Input 1" value="AIF1RX2" />
+			<ctl name="SPKOUTL Input 3" value="ASRC2L" />
+			<ctl name="SPKOUTR Input 3" value="ASRC2R" />
+			<ctl name="SPK Switch" value="1" />
+			<!-- Call recording route -->
+			<ctl name="AIF1TX1 Input 2" value="ASRC2L" />
+			<ctl name="AIF1TX2 Input 2" value="ASRC2R" />
 		</path>
 
 		<path name="incall_wb-headset">
@@ -662,6 +659,7 @@
 			<ctl name="SPK Switch" value="1" />
 		</path>
 
+		<!-- Loopback Output for ear-mic -->
 		<path name="loopback-headset">
 			<ctl name="HPOUTL Input 2" value="None" />
 			<ctl name="HPOUTR Input 2" value="None" />
@@ -732,9 +730,9 @@
 
 		<!-- Input stage -->
 		<path name="main-mic">
-			<ctl name="IN1R Mux" value="B" />
-			<ctl name="LHPF1 Input 1" value="IN1R" />
-			<ctl name="Sub Mic Switch" value="1" />
+			<ctl name="IN1L Mux" value="B" />
+			<ctl name="LHPF1 Input 1" value="IN1L" />
+			<ctl name="Main Mic Switch" value="1" />
 		</path>
 
 		<path name="headset-mic">
@@ -1004,7 +1002,7 @@
 		</path>
 
 		<path name="incall_nb-speaker-mic">
-			<ctl name="IN1R Mux" value="B" />
+			<ctl name="IN1L Mux" value="B" />
 			<ctl name="ASRC RATE 1" value="SYNCCLK rate 1" />
 			<ctl name="ASRC1L Input" value="LHPF1" />
 			<ctl name="ASRC1R Input" value="LHPF1" />
@@ -1012,8 +1010,8 @@
 			<ctl name="ISRC2DEC2 Input" value="ASRC1R" />
 			<ctl name="AIF2TX1 Input 1" value="ISRC2DEC1" />
 			<ctl name="AIF2TX2 Input 1" value="ISRC2DEC2" />
-			<ctl name="LHPF1 Input 1" value="IN1R" />
-			<ctl name="Sub Mic Switch" value="1" />
+			<ctl name="LHPF1 Input 1" value="IN1L" />
+			<ctl name="Main Mic Switch" value="1" />
 			<!-- Call recording route -->
 			<ctl name="AIF1TX1 Input 1" value="LHPF1" />
 			<ctl name="AIF1TX2 Input 1" value="LHPF1" />
@@ -1035,7 +1033,7 @@
 		</path>
 
 		<path name="incall_nb-headphone-mic">
-			<ctl name="IN1R Mux" value="B" />
+			<ctl name="IN1L Mux" value="B" />
 			<ctl name="ASRC RATE 1" value="SYNCCLK rate 1" />
 			<ctl name="ASRC1L Input" value="LHPF1" />
 			<ctl name="ASRC1R Input" value="LHPF1" />
@@ -1043,8 +1041,8 @@
 			<ctl name="ISRC2DEC2 Input" value="ASRC1R" />
 			<ctl name="AIF2TX1 Input 1" value="ISRC2DEC1" />
 			<ctl name="AIF2TX2 Input 1" value="ISRC2DEC2" />
-			<ctl name="LHPF1 Input 1" value="IN1R" />
-			<ctl name="Sub Mic Switch" value="1" />
+			<ctl name="LHPF1 Input 1" value="IN1L" />
+			<ctl name="Main Mic Switch" value="1" />
 			<!-- Call recording route -->
 			<ctl name="AIF1TX1 Input 1" value="LHPF1" />
 			<ctl name="AIF1TX2 Input 1" value="LHPF1" />
@@ -1278,6 +1276,7 @@
 			<path name="incall_wb-bt-sco-headset-in" />
 		</path>
 
+		<!-- Loopback Input for ear-mic -->
 		<path name="loopback-mic">
 			<path name="main-mic" />
 			<path name="capture_channel_left" />
@@ -1325,14 +1324,13 @@
 		</path>
 
 		<path name="echo_test-2nd-mic">
-			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="echo_test-3rd-mic">
 		</path>
 
 		<path name="echo_test-dualmic">
-			<!-- TODO: Not supported -->
+			<path name="capture_channel_stereo" />
 		</path>
 
 		<!-- call forwarding input -->
@@ -1377,24 +1375,26 @@
 		</path>
 
 		<path name="gain-media-speaker">
-			<ctl name="Speaker Digital Volume" value="122" />
-			<ctl name="SPKOUTL Input 1 Volume" value="32" />
-			<ctl name="SPKOUTR Input 1 Volume" value="32" />
+			<ctl name="Speaker Digital Volume" value="126" />
+			<ctl name="SPKOUTL Input 1 Volume" value="30" />
+			<ctl name="SPKOUTR Input 1 Volume" value="29" />
 		</path>
 
 		<path name="gain-media-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="126" />
+			<ctl name="HPOUT1L Impedance Volume" value="117" />
+			<ctl name="HPOUT1R Impedance Volume" value="117" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-media-speaker-headset">
-			<ctl name="Speaker Digital Volume" value="124" />
-			<ctl name="SPKOUTL Input 1 Volume" value="32" />
-			<ctl name="SPKOUTR Input 1 Volume" value="32" />
+			<ctl name="Speaker Digital Volume" value="126" />
+			<ctl name="SPKOUTL Input 1 Volume" value="30" />
+			<ctl name="SPKOUTR Input 1 Volume" value="30" />
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="60" />
+			<ctl name="HPOUT1L Impedance Volume" value="60" />
+			<ctl name="HPOUT1R Impedance Volume" value="60" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
@@ -1407,9 +1407,9 @@
 		<path name="gain-media-speaker-bt-sco-headset">
 			<ctl name="AIF3TX1 Input 1 Volume" value="32" />
 			<ctl name="AIF3TX1 Input 2 Volume" value="32" />
-			<ctl name="Speaker Digital Volume" value="124" />
-			<ctl name="SPKOUTL Input 1 Volume" value="32" />
-			<ctl name="SPKOUTR Input 1 Volume" value="32" />
+			<ctl name="Speaker Digital Volume" value="126" />
+			<ctl name="SPKOUTL Input 1 Volume" value="30" />
+			<ctl name="SPKOUTR Input 1 Volume" value="30" />
 		</path>
 
 		<!-- Ringtone playback volume -->
@@ -1418,24 +1418,26 @@
 		</path>
 
 		<path name="gain-ringtone-speaker">
-			<ctl name="Speaker Digital Volume" value="124" />
-			<ctl name="SPKOUTL Input 1 Volume" value="32" />
-			<ctl name="SPKOUTR Input 1 Volume" value="32" />
+			<ctl name="Speaker Digital Volume" value="126" />
+			<ctl name="SPKOUTL Input 1 Volume" value="30" />
+			<ctl name="SPKOUTR Input 1 Volume" value="30" />
 		</path>
 
 		<path name="gain-ringtone-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="72" />
+			<ctl name="HPOUT1L Impedance Volume" value="60" />
+			<ctl name="HPOUT1R Impedance Volume" value="60" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-ringtone-speaker-headset">
-			<ctl name="Speaker Digital Volume" value="124" />
-			<ctl name="SPKOUTL Input 1 Volume" value="32" />
-			<ctl name="SPKOUTR Input 1 Volume" value="32" />
+			<ctl name="Speaker Digital Volume" value="126" />
+			<ctl name="SPKOUTL Input 1 Volume" value="30" />
+			<ctl name="SPKOUTR Input 1 Volume" value="30" />
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="60" />
+			<ctl name="HPOUT1L Impedance Volume" value="60" />
+			<ctl name="HPOUT1R Impedance Volume" value="60" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 
@@ -1449,9 +1451,9 @@
 		<path name="gain-ringtone-speaker-bt-sco-headset">
 			<ctl name="AIF3TX1 Input 1 Volume" value="32" />
 			<ctl name="AIF3TX2 Input 1 Volume" value="32" />
-			<ctl name="Speaker Digital Volume" value="124" />
-			<ctl name="SPKOUTL Input 1 Volume" value="32" />
-			<ctl name="SPKOUTR Input 1 Volume" value="32" />
+			<ctl name="Speaker Digital Volume" value="126" />
+			<ctl name="SPKOUTL Input 1 Volume" value="30" />
+			<ctl name="SPKOUTR Input 1 Volume" value="30" />
 		</path>
 
 		<!-- Communication playback volume -->
@@ -1467,14 +1469,16 @@
 
 		<path name="gain-communication-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="102" />
+			<ctl name="HPOUT1L Impedance Volume" value="107" />
+			<ctl name="HPOUT1R Impedance Volume" value="107" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-communication-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="102" />
+			<ctl name="HPOUT1L Impedance Volume" value="107" />
+			<ctl name="HPOUT1R Impedance Volume" value="107" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
@@ -1490,21 +1494,23 @@
 		</path>
 
 		<path name="gain-samsung_voip-speaker">
-			<ctl name="Speaker Digital Volume" value="124" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-samsung_voip-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="102" />
+			<ctl name="HPOUT1L Impedance Volume" value="107" />
+			<ctl name="HPOUT1R Impedance Volume" value="107" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-samsung_voip-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="102" />
+			<ctl name="HPOUT1L Impedance Volume" value="107" />
+			<ctl name="HPOUT1R Impedance Volume" value="107" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
@@ -1527,14 +1533,16 @@
 
 		<path name="gain-voip-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="102" />
+			<ctl name="HPOUT1L Impedance Volume" value="107" />
+			<ctl name="HPOUT1R Impedance Volume" value="107" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-voip-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="102" />
+			<ctl name="HPOUT1L Impedance Volume" value="107" />
+			<ctl name="HPOUT1R Impedance Volume" value="107" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
@@ -1557,14 +1565,16 @@
 
 		<path name="gain-video_call-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="116" />
+			<ctl name="HPOUT1L Impedance Volume" value="121" />
+			<ctl name="HPOUT1R Impedance Volume" value="121" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-video_call-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="121" />
+			<ctl name="HPOUT1R Impedance Volume" value="121" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
@@ -1580,21 +1590,23 @@
 		</path>
 
 		<path name="gain-volte_vt_ap_nb-speaker">
-			<ctl name="Speaker Digital Volume" value="122" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_ap_nb-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="116" />
+			<ctl name="HPOUT1R Impedance Volume" value="116" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_ap_nb-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="116" />
+			<ctl name="HPOUT1R Impedance Volume" value="116" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
@@ -1610,21 +1622,23 @@
 		</path>
 
 		<path name="gain-volte_vt_ap_wb-speaker">
-			<ctl name="Speaker Digital Volume" value="124" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_ap_wb-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="122" />
+			<ctl name="HPOUT1R Impedance Volume" value="122" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_ap_wb-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="122" />
+			<ctl name="HPOUT1R Impedance Volume" value="122" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
@@ -1636,18 +1650,19 @@
 
 		<!-- VoLTE CP NB playback volume -->
 		<path name="gain-volte_cp_nb-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-volte_cp_nb-speaker">
-			<ctl name="Speaker Digital Volume" value="122" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_cp_nb-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="116" />
+			<ctl name="HPOUT1L Impedance Volume" value="116" />
+			<ctl name="HPOUT1R Impedance Volume" value="116" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1656,7 +1671,8 @@
 
 		<path name="gain-volte_cp_nb-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="116" />
+			<ctl name="HPOUT1R Impedance Volume" value="116" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1672,7 +1688,7 @@
 
 		<!-- VoLTE CP NB/EXTRA_VOL playback volume -->
 		<path name="gain-volte_cp_nb_extra_vol-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-volte_cp_nb_extra_vol-speaker">
@@ -1683,7 +1699,7 @@
 
 		<!-- VoLTE CP NB/EXTRA_VOL/HANDOVER playback volume -->
 		<path name="gain-volte_cp_nb_extra_vol_handover-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-volte_cp_nb_extra_vol_handover-speaker">
@@ -1694,18 +1710,19 @@
 
 		<!-- VoLTE VT CP NB playback volume -->
 		<path name="gain-volte_vt_cp_nb-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-volte_vt_cp_nb-speaker">
-			<ctl name="Speaker Digital Volume" value="122" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_cp_nb-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="116" />
+			<ctl name="HPOUT1L Impedance Volume" value="116" />
+			<ctl name="HPOUT1R Impedance Volume" value="116" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1714,7 +1731,8 @@
 
 		<path name="gain-volte_vt_cp_nb-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="116" />
+			<ctl name="HPOUT1R Impedance Volume" value="116" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1747,18 +1765,19 @@
 
 		<!-- VoLTE CP WB playback volume -->
 		<path name="gain-volte_cp_wb-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-volte_cp_wb-speaker">
-			<ctl name="Speaker Digital Volume" value="124" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_cp_wb-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="122" />
+			<ctl name="HPOUT1L Impedance Volume" value="122" />
+			<ctl name="HPOUT1R Impedance Volume" value="122" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1767,7 +1786,8 @@
 
 		<path name="gain-volte_cp_wb-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="122" />
+			<ctl name="HPOUT1R Impedance Volume" value="122" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1783,25 +1803,26 @@
 
 		<!-- VoLTE CP WB/EXTRA_VOL playback volume -->
 		<path name="gain-volte_cp_wb_extra_vol-speaker">
-			<ctl name="Speaker Digital Volume" value="124" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<!-- VoLTE VT CP WB playback volume -->
 		<path name="gain-volte_vt_cp_wb-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-volte_vt_cp_wb-speaker">
-			<ctl name="Speaker Digital Volume" value="124" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_cp_wb-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="122" />
+			<ctl name="HPOUT1L Impedance Volume" value="122" />
+			<ctl name="HPOUT1R Impedance Volume" value="122" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1810,7 +1831,8 @@
 
 		<path name="gain-volte_vt_cp_wb-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="122" />
+			<ctl name="HPOUT1R Impedance Volume" value="122" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1827,7 +1849,7 @@
 		<!-- CP Call Output volume -->
 		<!-- NB volume -->
 		<path name="gain-incall_nb-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-incall_nb-speaker">
@@ -1838,7 +1860,8 @@
 
 		<path name="gain-incall_nb-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="126" />
+			<ctl name="HPOUT1L Impedance Volume" value="121" />
+			<ctl name="HPOUT1R Impedance Volume" value="121" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1847,7 +1870,8 @@
 
 		<path name="gain-incall_nb-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="130" />
+			<ctl name="HPOUT1L Impedance Volume" value="121" />
+			<ctl name="HPOUT1R Impedance Volume" value="121" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1880,7 +1904,7 @@
 
 		<!-- NB/EXTRA_VOL Volume-->	
 		<path name="gain-incall_nb_extra_vol-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-incall_nb_extra_vol-speaker">
@@ -1891,7 +1915,7 @@
 
 		<!-- NB/EXTRA_VOL/HANDOVER Volume-->	
 		<path name="gain-incall_nb_extra_vol_handover-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-incall_nb_extra_vol_handover-speaker">
@@ -1902,7 +1926,7 @@
 
 		<!-- WB volume -->
 		<path name="gain-incall_wb-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-incall_wb-speaker">
@@ -1913,7 +1937,8 @@
 
 		<path name="gain-incall_wb-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="132" />
+			<ctl name="HPOUT1L Impedance Volume" value="127" />
+			<ctl name="HPOUT1R Impedance Volume" value="127" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1922,7 +1947,8 @@
 
 		<path name="gain-incall_wb-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="127" />
+			<ctl name="HPOUT1R Impedance Volume" value="127" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1936,7 +1962,7 @@
 
 		<!-- WB/EXTRA_VOL Volume-->	
 		<path name="gain-incall_wb_extra_vol-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-incall_wb_extra_vol-speaker">
@@ -1947,7 +1973,7 @@
 
 		<!-- Packet Loopback output volume-->
 		<path name="gain-loopback_packet-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-loopback_packet-speaker">
@@ -1958,7 +1984,8 @@
 
 		<path name="gain-loopback_packet-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="116" />
+			<ctl name="HPOUT1L Impedance Volume" value="116" />
+			<ctl name="HPOUT1R Impedance Volume" value="116" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1974,7 +2001,8 @@
 		<!-- Loopback output volume for ear-mic -->
 		<path name="gain-loopback-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="124" />
+			<ctl name="HPOUT1R Impedance Volume" value="124" />
 			<ctl name="HPOUTL Input 3 Volume" value="32" />
 			<ctl name="HPOUTR Input 3 Volume" value="32" />
 		</path>
@@ -1986,7 +2014,8 @@
 
 		<path name="gain-tty_mode-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="124" />
+			<ctl name="HPOUT1L Impedance Volume" value="113" />
+			<ctl name="HPOUT1R Impedance Volume" value="113" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 			<ctl name="HPOUTL Input 2 Volume" value="32" />
@@ -1999,25 +2028,27 @@
 		</path>
 
 		<path name="gain-call_forwarding_slave-handset">
-			<!-- TODO: Not Supported -->
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-call_forwarding_slave-speaker">
-			<ctl name="Speaker Digital Volume" value="134" />
+			<ctl name="Speaker Digital Volume" value="128" />
 			<ctl name="SPKOUTL Input 1 Volume" value="32" />
 			<ctl name="SPKOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-call_forwarding_slave-headset">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="128" />
+			<ctl name="HPOUT1L Impedance Volume" value="123" />
+			<ctl name="HPOUT1R Impedance Volume" value="123" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-call_forwarding_slave-headphone">
 			<ctl name="Noise Gate Switch" value="0" />
-			<ctl name="HPOUT Digital Volume" value="128" />
+			<ctl name="HPOUT1L Impedance Volume" value="123" />
+			<ctl name="HPOUT1R Impedance Volume" value="123" />
 			<ctl name="HPOUTL Input 1 Volume" value="32" />
 			<ctl name="HPOUTR Input 1 Volume" value="32" />
 		</path>
@@ -2030,8 +2061,8 @@
 		<!-- Input stage volume -->
 		<!-- media input volume -->
 		<path name="gain-media-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2042,8 +2073,8 @@
 		</path>
 
 		<path name="gain-media-headphone-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2054,55 +2085,54 @@
 
 		<!-- camcorder input volume -->
 		<path name="gain-camcorder-mic">
-			<ctl name="IN1R Volume" value="13" />
-			<ctl name="IN1R Digital Volume" value="128" />
-			<ctl name="LHPF1 Input 1 Volume" value="30" />
-			<ctl name="EQ1 Input Volume" value="30" />
-			<ctl name="EQ2 Input Volume" value="30" />
+			<ctl name="IN1L Volume" value="14" />
+			<ctl name="IN1L Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-camcorder-headset-mic">
+			<ctl name="Input Ramp Up" value="15ms/6dB" />
 			<ctl name="IN2 Volume" value="30" />
-			<ctl name="IN2 Digital Volume" value="100" />
+			<ctl name="IN2 Digital Volume" value="118" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-camcorder-headphone-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="128" />
-			<ctl name="LHPF1 Input 1 Volume" value="30" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<!-- voice recording input volume -->
 		<path name="gain-recording-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="30" />
 		</path>
 
 		<path name="gain-recording-headset-mic">
 			<ctl name="IN2 Volume" value="30" />
-			<ctl name="IN2 Digital Volume" value="100" />
+			<ctl name="IN2 Digital Volume" value="118" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-recording-headphone-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="128" />
-			<ctl name="LHPF1 Input 1 Volume" value="30" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<!-- interview input volume -->
 		<path name="gain-interview-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="140" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="140" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<!-- recognition input volume -->
 		<path name="gain-recognition-mic">
-			<ctl name="IN1R Volume" value="27" />
-			<ctl name="IN1R Digital Volume" value="155" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="155" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2113,8 +2143,8 @@
 		</path>
 
 		<path name="gain-recognition-headphone-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="142" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="142" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2125,15 +2155,15 @@
 
 		<!-- bargein samsung input volume -->
 		<path name="gain-bargein_samsung_engine-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="120" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="120" />
 			<ctl name="LHPF1 Input 1 Volume" value="26" />
 		</path>
 
 		<path name="gain-bargein_samsung_engine-headset-mic">
 			<ctl name="IN2 Volume" value="30" />
-			<ctl name="IN2 Digital Volume" value="120" />
-			<ctl name="LHPF1 Input 1 Volume" value="26" />
+			<ctl name="IN2 Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-bargein_samsung_engine-bt-sco-headset-in">
@@ -2143,15 +2173,15 @@
 
 		<!-- bargein external input volume-->
 		<path name="gain-bargein_external_engine-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="120" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="120" />
 			<ctl name="LHPF1 Input 1 Volume" value="26" />
 		</path>
 
 		<path name="gain-bargein_external_engine-headset-mic">
 			<ctl name="IN2 Volume" value="30" />
-			<ctl name="IN2 Digital Volume" value="120" />
-			<ctl name="LHPF1 Input 1 Volume" value="26" />
+			<ctl name="IN2 Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-bargein_external_engine-bt-sco-headset-in">
@@ -2161,15 +2191,15 @@
 
 		<!-- svoice/carmode samsung input volume -->
 		<path name="gain-dualmic_samsung_engine-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="120" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="120" />
 			<ctl name="LHPF1 Input 1 Volume" value="26" />
 		</path>
 
 		<path name="gain-dualmic_samsung_engine-headset-mic">
 			<ctl name="IN2 Volume" value="30" />
-			<ctl name="IN2 Digital Volume" value="120" />
-			<ctl name="LHPF1 Input 1 Volume" value="26" />
+			<ctl name="IN2 Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-dualmic_samsung_engine-bt-sco-headset-in">
@@ -2179,15 +2209,15 @@
 
 		<!-- svoice/carmode external input volume -->
 		<path name="gain-dualmic_external_engine-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="140" />
-			<ctl name="LHPF1 Input 1 Volume" value="32" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="120" />
+			<ctl name="LHPF1 Input 1 Volume" value="26" />
 		</path>
 
 		<path name="gain-dualmic_external_engine-headset-mic">
 			<ctl name="IN2 Volume" value="30" />
-			<ctl name="IN2 Digital Volume" value="120" />
-			<ctl name="LHPF1 Input 1 Volume" value="26" />
+			<ctl name="IN2 Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-dualmic_external_engine-bt-sco-headset-in">
@@ -2201,20 +2231,20 @@
 		</path>
 
 		<path name="gain-communication-speaker-mic">
-			<ctl name="IN1R Volume" value="16" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-communication-headset-mic">
-			<ctl name="IN2 Volume" value="30" />
-			<ctl name="IN2 Digital Volume" value="128" />
+			<ctl name="IN2 Volume" value="38" />
+			<ctl name="IN2 Digital Volume" value="140" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-communication-headphone-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="140" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2225,14 +2255,12 @@
 
 		<!-- samsung voip input volume -->
 		<path name="gain-samsung_voip-handset-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="160" />
-			<ctl name="LHPF1 Input 1 Volume" value="32" />
+			<!-- TODO: We will make this -->
 		</path>
 
 		<path name="gain-samsung_voip-speaker-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="160" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2243,9 +2271,9 @@
 		</path>
 
 		<path name="gain-samsung_voip-headphone-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="120" />
-			<ctl name="LHPF1 Input 1 Volume" value="26" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-samsung_voip-bt-sco-headset-in">
@@ -2259,20 +2287,20 @@
 		</path>
 
 		<path name="gain-voip-speaker-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="140" />
+			<ctl name="IN1L Volume" value="22" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-voip-headset-mic">
-			<ctl name="IN2 Volume" value="38" />
-			<ctl name="IN2 Digital Volume" value="140" />
+			<ctl name="IN2 Volume" value="19" />
+			<ctl name="IN2 Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-voip-headphone-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="140" />
+			<ctl name="IN1L Volume" value="22" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2287,20 +2315,20 @@
 		</path>
 
 		<path name="gain-video_call-speaker-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-video_call-headset-mic">
-			<ctl name="IN2 Volume" value="21" />
+			<ctl name="IN2 Volume" value="28" />
 			<ctl name="IN2 Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-video_call-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2315,20 +2343,20 @@
 		</path>
 
 		<path name="gain-volte_vt_ap_nb-speaker-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
-			<ctl name="LHPF1 Input 1 Volume" value="32" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="26" />
 		</path>
 
 		<path name="gain-volte_vt_ap_nb-headset-mic">
 			<ctl name="IN2 Volume" value="21" />
 			<ctl name="IN2 Digital Volume" value="128" />
-			<ctl name="LHPF1 Input 1 Volume" value="32" />
+			<ctl name="LHPF2 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_ap_nb-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="21" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2343,20 +2371,20 @@
 		</path>
 
 		<path name="gain-volte_vt_ap_wb-speaker-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_ap_wb-headset-mic">
 			<ctl name="IN2 Volume" value="21" />
 			<ctl name="IN2 Digital Volume" value="128" />
-			<ctl name="LHPF1 Input 1 Volume" value="32" />
+			<ctl name="LHPF2 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-volte_vt_ap_wb-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="21" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2371,8 +2399,8 @@
 		</path>
 
 		<path name="gain-volte_vt_cp_nb-speaker-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2383,8 +2411,8 @@
 		</path>
 
 		<path name="gain-volte_vt_cp_nb-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="21" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2401,8 +2429,8 @@
 		</path>
 
 		<path name="gain-volte_cp_nb-speaker-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2413,8 +2441,8 @@
 		</path>
 
 		<path name="gain-volte_cp_nb-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="21" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2465,8 +2493,8 @@
 		</path>
 
 		<path name="gain-volte_cp_wb-speaker-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2477,8 +2505,8 @@
 		</path>
 
 		<path name="gain-volte_cp_wb-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="21" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2495,8 +2523,8 @@
 		</path>
 
 		<path name="gain-volte_cp_wb_extra_vol-speaker-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2506,8 +2534,8 @@
 		</path>
 
 		<path name="gain-volte_vt_cp_wb-speaker-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2518,8 +2546,8 @@
 		</path>
 
 		<path name="gain-volte_vt_cp_wb-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="21" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2537,8 +2565,8 @@
 		</path>
 
 		<path name="gain-incall_nb-speaker-mic">
-			<ctl name="IN1R Volume" value="21" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2549,8 +2577,8 @@
 		</path>
 
 		<path name="gain-incall_nb-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2584,8 +2612,8 @@
 		</path>
 
 		<path name="gain-incall_nb_extra_vol-speaker-mic">
-			<ctl name="IN1R Volume" value="21" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2595,8 +2623,8 @@
 		</path>
 
 		<path name="gain-incall_nb_extra_vol_handover-speaker-mic">
-			<ctl name="IN1R Volume" value="21" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2606,8 +2634,8 @@
 		</path>
 
 		<path name="gain-incall_wb-speaker-mic">
-			<ctl name="IN1R Volume" value="18" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2618,8 +2646,8 @@
 		</path>
 
 		<path name="gain-incall_wb-headphone-mic">
-			<ctl name="IN1R Volume" value="24" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2636,8 +2664,8 @@
 		</path>
 
 		<path name="gain-incall_wb_extra_vol-speaker-mic">
-			<ctl name="IN1R Volume" value="18" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="20" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2650,8 +2678,8 @@
 
 		<!-- Packet Loopback Input -->
 		<path name="gain-loopback_packet-mic">
-			<ctl name="IN1R Volume" value="18" />
-			<ctl name="IN1R Digital Volume" value="110" />
+			<ctl name="IN1L Volume" value="18" />
+			<ctl name="IN1L Digital Volume" value="110" />
 			<ctl name="LHPF1 Input 1 Volume" value="10" />
 		</path>
 
@@ -2663,7 +2691,7 @@
 		</path>
 
 		<path name="gain-loopback_packet-headset-mic">
-			<ctl name="IN2 Volume" value="10" />
+			<ctl name="IN2 Volume" value="20" />
 			<ctl name="IN2 Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="30" />
 		</path>
@@ -2677,8 +2705,8 @@
 
 		<!-- TTY Mode Input volume -->
 		<path name="gain-tty_mode-hco-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="140" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="140" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2704,20 +2732,20 @@
 		</path>
 
 		<path name="gain-call_forwarding_slave-speaker-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-call_forwarding_slave-headset-mic">
-			<ctl name="IN2 Volume" value="30" />
-			<ctl name="IN2 Digital Volume" value="127" />
-			<ctl name="LHPF1 Input 1 Volume" value="30" />
+			<ctl name="IN2 Volume" value="24" />
+			<ctl name="IN2 Digital Volume" value="128" />
+			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
 		<path name="gain-call_forwarding_slave-headphone-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="128" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="128" />
 			<ctl name="LHPF1 Input 1 Volume" value="32" />
 		</path>
 
@@ -2729,8 +2757,8 @@
 
 		<!-- echo(rms) test input volume -->
 		<path name="gain-echo_test-mic">
-			<ctl name="IN1R Volume" value="30" />
-			<ctl name="IN1R Digital Volume" value="120" />
+			<ctl name="IN1L Volume" value="30" />
+			<ctl name="IN1L Digital Volume" value="120" />
 			<ctl name="LHPF1 Input 1 Volume" value="26" />
 		</path>
 

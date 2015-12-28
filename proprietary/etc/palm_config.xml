@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <palmmotion>
-    <palmconfigs deviceName="gts28wifi" 
+    <palmconfigs deviceName="gts210wifi" 
          thresholdPalmCount="3"
          thresholdMajorTouch="70.0"
          thresholdMajorSweepPortrait="100.0"

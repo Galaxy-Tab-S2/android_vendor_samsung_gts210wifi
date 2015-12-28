@@ -1,4 +1,3 @@
-/system/media/audio/ringtones/Prelude.ogg
 /system/media/audio/ringtones/Over_the_Horizon.ogg
 /system/media/audio/ringtones/Beginning.ogg
 /system/media/audio/ringtones/Sparkling_Melody.ogg
@@ -11,7 +10,6 @@
 /system/media/audio/ringtones/Dance_Party.ogg
 /system/media/audio/ringtones/Somewhere.ogg
 /system/media/audio/ringtones/One_Step_Forward.ogg
-/system/media/audio/ringtones/Warm_Greetings.ogg
 /system/media/audio/ringtones/On_the_Stage.ogg
 /system/media/audio/ringtones/Drifting_Downstream.ogg
 /system/media/audio/ringtones/Fresh_Morning.ogg
