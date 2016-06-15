@@ -105,7 +105,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts210wifi/proprietary/vendor/firmware/setfile_6b2.bin:system/vendor/firmware/setfile_6b2.bin \
     vendor/samsung/gts210wifi/proprietary/bin/gpsd:system/bin/gpsd \
     vendor/samsung/gts210wifi/proprietary/lib/hw/gps.universal5433.so:system/lib/hw/gps.universal5433.so \
-    vendor/samsung/gts210wifi/proprietary/lib/libwrappergps.so:system/lib/libwrappergps.so \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/egl/libGLES_mali.so:system/vendor/lib/egl/libGLES_mali.so \
     vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.AVC.Encoder.so:system/lib/omx/libOMX.Exynos.AVC.Encoder.so \
     vendor/samsung/gts210wifi/proprietary/lib/libyasalgo.so:system/lib/libyasalgo.so \
@@ -117,7 +116,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
     vendor/samsung/gts210wifi/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     vendor/samsung/gts210wifi/proprietary/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
-    vendor/samsung/gts210wifi/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
     vendor/samsung/gts210wifi/proprietary/app/FFFFFFFF000000000000000000000001.drbin:system/app/FFFFFFFF000000000000000000000001.drbin \
     vendor/samsung/gts210wifi/proprietary/app/mcRegistry/07010000000000000000000000000000.tlbin:system/app/mcRegistry/07010000000000000000000000000000.tlbin \
     vendor/samsung/gts210wifi/proprietary/app/mcRegistry/08130000000000000000000000000000.tlbin:system/app/mcRegistry/08130000000000000000000000000000.tlbin \
