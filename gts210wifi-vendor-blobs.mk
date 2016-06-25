@@ -16,106 +16,8 @@
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/gts210wifi/proprietary/vendor/firmware/bcm4358A3_V0062.0104.hcd:system/vendor/firmware/bcm4358A3_V0062.0104.hcd \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_apsta.bin:system/etc/wifi/bcmdhd_apsta.bin \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_apsta.bin_4356_a2:system/etc/wifi/bcmdhd_apsta.bin_4356_a2 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_apsta.bin_4358_a1:system/etc/wifi/bcmdhd_apsta.bin_4358_a1 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_ibss.bin:system/etc/wifi/bcmdhd_ibss.bin \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_ibss.bin_4356_a2:system/etc/wifi/bcmdhd_ibss.bin_4356_a2 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_ibss.bin_4358_a1:system/etc/wifi/bcmdhd_ibss.bin_4358_a1 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_mfg.bin:system/etc/wifi/bcmdhd_mfg.bin \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_mfg.bin_4356_a2:system/etc/wifi/bcmdhd_mfg.bin_4356_a2 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_mfg.bin_4358_a1:system/etc/wifi/bcmdhd_mfg.bin_4358_a1 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_sta.bin:system/etc/wifi/bcmdhd_sta.bin \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_sta.bin_4356_a2:system/etc/wifi/bcmdhd_sta.bin_4356_a2 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/bcmdhd_sta.bin_4358_a1:system/etc/wifi/bcmdhd_sta.bin_4358_a1 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/cred.conf:system/etc/wifi/cred.conf \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_mfg.txt_4356_a2:system/etc/wifi/nvram_mfg.txt_4356_a2 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_mfg.txt_4358_a1:system/etc/wifi/nvram_mfg.txt_4358_a1 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt_4356_a2:system/etc/wifi/nvram_net.txt_4356_a2 \
-    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt_4358_a1:system/etc/wifi/nvram_net.txt_4358_a1 \
-    vendor/samsung/gts210wifi/proprietary/vendor/firmware/hevc_fw.bin:system/vendor/firmware/hevc_fw.bin \
-    vendor/samsung/gts210wifi/proprietary/vendor/firmware/mfc_fw.bin:system/vendor/firmware/mfc_fw.bin \
-    vendor/samsung/gts210wifi/proprietary/vendor/firmware/fimc_is_fw2_4h5.bin:system/vendor/firmware/fimc_is_fw2_4h5.bin \
-    vendor/samsung/gts210wifi/proprietary/vendor/firmware/seiren_fw_dram.bin:system/vendor/firmware/seiren_fw_dram.bin \
-    vendor/samsung/gts210wifi/proprietary/vendor/firmware/seiren_fw_sram.bin:system/vendor/firmware/seiren_fw_sram.bin \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_ANALOG_DOCK.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_ANALOG_DOCK.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_ANALOG_DOCK.txt:system/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_ANALOG_DOCK.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/BargeInDriving/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/LVVEFS_Rx_Configuration.txt:system/vendor/etc/nxp/LVVEFS_Rx_Configuration.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/LVVEFS_Tx_Configuration.txt:system/vendor/etc/nxp/LVVEFS_Tx_Configuration.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_EARPIECE.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_NARROWBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIP/Rx_ControlParams_WIDEBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_EARPIECE.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_NARROWBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIP/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIPFMC/Rx_ControlParams_WIDEBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIPFMC/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIPSec/Rx_ControlParams_WIDEBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_EARPIECE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_SPEAKER.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt \
-    vendor/samsung/gts210wifi/proprietary/vendor/lib/liblvverx_3.27.02.so:system/vendor/lib/liblvverx_3.27.02.so \
-    vendor/samsung/gts210wifi/proprietary/vendor/lib/liblvvetx_3.27.02.so:system/vendor/lib/liblvvetx_3.27.02.so \
-    vendor/samsung/gts210wifi/proprietary/lib/hw/camera.universal5433.so:system/lib/hw/camera.universal5433.so \
-    vendor/samsung/gts210wifi/proprietary/lib/libexynoscamera.so:system/lib/libexynoscamera.so \
-    vendor/samsung/gts210wifi/proprietary/lib/libhwjpeg.so:system/lib/libhwjpeg.so \
-    vendor/samsung/gts210wifi/proprietary/lib/libsensorlistener.so:system/lib/libsensorlistener.so \
-    vendor/samsung/gts210wifi/proprietary/lib/libvdis.so:system/lib/libvdis.so \
-    vendor/samsung/gts210wifi/proprietary/vendor/firmware/setfile_4h5.bin:system/vendor/firmware/setfile_4h5.bin \
-    vendor/samsung/gts210wifi/proprietary/vendor/firmware/setfile_6b2.bin:system/vendor/firmware/setfile_6b2.bin \
     vendor/samsung/gts210wifi/proprietary/bin/gpsd:system/bin/gpsd \
     vendor/samsung/gts210wifi/proprietary/lib/hw/gps.universal5433.so:system/lib/hw/gps.universal5433.so \
-    vendor/samsung/gts210wifi/proprietary/vendor/lib/egl/libGLES_mali.so:system/vendor/lib/egl/libGLES_mali.so \
-    vendor/samsung/gts210wifi/proprietary/lib/omx/libOMX.Exynos.AVC.Encoder.so:system/lib/omx/libOMX.Exynos.AVC.Encoder.so \
-    vendor/samsung/gts210wifi/proprietary/lib/libyasalgo.so:system/lib/libyasalgo.so \
-    vendor/samsung/gts210wifi/proprietary/lib/hw/sensors.exynos5.so:system/lib/hw/sensors.exynos5.so \
-    vendor/samsung/gts210wifi/proprietary/lib/liboemcrypto.so:system/lib/liboemcrypto.so \
-    vendor/samsung/gts210wifi/proprietary/vendor/lib/mediadrm/libdrmclearkeyplugin.so:system/vendor/lib/mediadrm/libdrmclearkeyplugin.so \
-    vendor/samsung/gts210wifi/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
-    vendor/samsung/gts210wifi/proprietary/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
-    vendor/samsung/gts210wifi/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
-    vendor/samsung/gts210wifi/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
-    vendor/samsung/gts210wifi/proprietary/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     vendor/samsung/gts210wifi/proprietary/app/FFFFFFFF000000000000000000000001.drbin:system/app/FFFFFFFF000000000000000000000001.drbin \
     vendor/samsung/gts210wifi/proprietary/app/mcRegistry/07010000000000000000000000000000.tlbin:system/app/mcRegistry/07010000000000000000000000000000.tlbin \
     vendor/samsung/gts210wifi/proprietary/app/mcRegistry/08130000000000000000000000000000.tlbin:system/app/mcRegistry/08130000000000000000000000000000.tlbin \
@@ -145,4 +47,10 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin:system/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin \
     vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffffd00000000000000000000004.tlbin:system/app/mcRegistry/ffffffffd00000000000000000000004.tlbin \
     vendor/samsung/gts210wifi/proprietary/app/mcRegistry/ffffffffd00000000000000000000016.tlbin:system/app/mcRegistry/ffffffffd00000000000000000000016.tlbin \
-    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/fffffffff0000000000000000000001e.tlbin:system/app/mcRegistry/fffffffff0000000000000000000001e.tlbin
+    vendor/samsung/gts210wifi/proprietary/app/mcRegistry/fffffffff0000000000000000000001e.tlbin:system/app/mcRegistry/fffffffff0000000000000000000001e.tlbin \
+    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
+    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_mfg.txt_4356_a2:system/etc/wifi/nvram_mfg.txt_4356_a2 \
+    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_mfg.txt_4358_a1:system/etc/wifi/nvram_mfg.txt_4358_a1 \
+    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
+    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt_4356_a2:system/etc/wifi/nvram_net.txt_4356_a2 \
+    vendor/samsung/gts210wifi/proprietary/etc/wifi/nvram_net.txt_4358_a1:system/etc/wifi/nvram_net.txt_4358_a1
